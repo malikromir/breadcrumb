@@ -1,0 +1,65 @@
+{
+  "npmScope": "xng",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "NzljZWJiY2YtNTU3Yy00ZDQyLWEwY2EtNmQ4YWQ5Mjg3Nzc2fHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "breadcrumb-demo": {
+      "tags": []
+    },
+    "breadcrumb-demo-e2e": {
+      "tags": [],
+      "implicitDependencies": ["breadcrumb-demo"]
+    },
+    "demo": {
+      "tags": []
+    },
+    "got-demo": {
+      "tags": []
+    },
+    "got-demo-e2e": {
+      "tags": [],
+      "implicitDependencies": ["got-demo"]
+    },
+    "simple-demo": {
+      "tags": []
+    },
+    "simple-demo-e2e": {
+      "tags": [],
+      "implicitDependencies": ["simple-demo"]
+    },
+    "xng-breadcrumb": {
+      "tags": []
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  }
+}
